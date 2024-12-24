@@ -1,0 +1,29 @@
+{% extends 'main.html' %} 
+{% block content %}
+
+<div class="student-container">
+  <table class="student-table" cellpadding="20px">
+    <form action="">
+      <tr>
+        <td class="table-header">Student Name</td>
+        <td class="table-header">Roll Number</td>
+        <td class="table-header">Course</td>
+        <td class="table-header">Address</td>
+      </tr>
+
+      <tr>
+        <td>{{ data.sname }}</td>
+        <td>{{ data.sroll }}</td>
+        <td>{{ data.scourse }}</td>
+        <td>{{ data.saddress }}</td>
+      </tr>
+    </form>
+  </table>
+
+  <div class="button-container">
+    <button class="action-button"><a href="{% url 'update' data.id %}">Edit</a></button>
+    <button class="action-button"><a href="{% url 'delete' data.id %}">Delete</a></button>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends 'main.html' %} {% block content %}
+
+<div class="main">
+  <div>
+    <button type="button" class="btn btn-outline-info">Info</button>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Roll No</th>
+        <th scope="col">Studen Name</th>
+        <th scope="col">Course</th>
+        <th scope="col">Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in data %}
+      <tr>
+        <td>{{ i.sroll }}</td>
+        <td>
+          <a class="name" href="{% url 'details'  i.id  %}">{{ i.sname }}</a>
+        </td>
+        <td>{{ i.scourse }}</td>
+        <td>{{ i.saddress }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% endblock content %}
+</div>
