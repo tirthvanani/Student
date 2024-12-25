@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Data
+from .models import Data, Contact
 
 
 # Create your views here.
@@ -60,7 +60,19 @@ def delete_data(request, pk):
     return render(request,'delete.html',context)
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('cname')
+        email = request.POST.get('cemail')
+        message = request.POST.get('cmessage') 
+
+        Contact.objects.create(cname=name, cemail=email, cmessage=message)
+        
+        return redirect('con_msg')
+    
     return render(request, 'contact.html')
 
 def about(request):
     return render(request, 'about.html')
+
+def con_msg(request):
+    return render(request, 'con_msg.html')

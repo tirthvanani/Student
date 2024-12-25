@@ -9,6 +9,5 @@ urlpatterns =[
     path('delete/<int:pk>',views.delete_data,name='delete'),
     path('contact/',views.contact,name='contact'),
     path('about/',views.about,name='about'),
-
-
+    path('con_msg/',views.con_msg,name='con_msg'),
 ]
