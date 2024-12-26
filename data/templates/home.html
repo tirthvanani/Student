@@ -1,11 +1,13 @@
-{% extends 'main.html' %} {% block content %}
+{% extends 'main.html' %} 
+{% block content %}
 
 <div class="main">
   <table style="margin-top: 20px;" class="table table-striped">
     <thead>
       <tr>
+        <th scope="col">S.No</th> <!-- Added S.No column -->
+        <th scope="col">Student Name</th>
         <th scope="col">Roll No</th>
-        <th scope="col">Studen Name</th>
         <th scope="col">Course</th>
         <th scope="col">Address</th>
       </tr>
@@ -13,16 +15,17 @@
     <tbody>
       {% for i in data %}
       <tr>
-        <td>{{ i.sroll }}</td>
+        <td>{{ forloop.counter }}</td> <!-- Display serial number -->
         <td>
-          <a class="name" href="{% url 'details'  i.id  %}">{{ i.sname }}</a>
+          <a class="name" href="{% url 'details' i.id %}">{{ i.sname }}</a>
         </td>
+        <td>{{ i.sroll }}</td>
         <td>{{ i.scourse }}</td>
         <td>{{ i.saddress }}</td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
-
-  {% endblock content %}
 </div>
+
+{% endblock content %}

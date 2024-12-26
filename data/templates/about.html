@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    About
-</body>
-</html>
+{% extends 'main.html' %}
+{% block content %}
+    <section id="about" class="about-section">
+        <div class="container">
+            <h1 class="about-title">About Us</h1>
+            <p class="about-description">Welcome to our website! We are a passionate team dedicated to delivering high-quality services and solutions. Our mission is to provide exceptional value to our clients through innovation, collaboration, and excellence.</p>
+            
+            <h2 class="about-heading">Our Vision</h2>
+            <p class="about-text">We strive to be leaders in our industry, recognized for our commitment to quality and customer satisfaction. Our vision is to build lasting relationships with our clients by offering tailored solutions that drive success.</p>
+            
+            <h2 class="about-heading">Our Team</h2>
+            <p class="about-text">Our team is made up of skilled professionals who are experts in their respective fields. We work together to achieve our common goal of delivering exceptional results for our clients.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-text">&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+{% endblock %}

@@ -378,3 +378,103 @@ p {
 .thank-you-container .btn:active {
     transform: scale(1);
 }
+
+/* style.css */
+
+/* About section */
+.about-section {
+    background-color: #f0f4f8;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container to center content */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About title */
+.about-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* About description */
+.about-description {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* About heading (subsection titles) */
+.about-heading {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* About text (subsection content) */
+.about-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+/* Footer text */
+.footer-text {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Hover effect for headings */
+.about-heading:hover {
+    color: #4CAF50;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Add subtle shadow effect for the container */
+.container {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Smooth transitions for footer */
+.footer {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.footer:hover {
+    background-color: #222;
+}

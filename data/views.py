@@ -5,7 +5,11 @@ from .models import Data, Contact
 # Create your views here.
 
 def home(request):
-    datas = Data.objects.all()
+    query = request.GET.get('q','')
+    if query:
+        datas = Data.objects.filter(sname__icontains=query)
+    else:
+        datas = Data.objects.all()
     context = {
         'data':datas
     }
@@ -18,10 +22,10 @@ def details(request, pk):
 
 def add(request):
     if request.method == 'POST':
-        roll = request.POST.get('sroll')
-        name = request.POST.get('sname')
-        course = request.POST.get('scourse') 
-        address = request.POST.get('saddress') 
+        roll = request.POST.get('roll')
+        name = request.POST.get('name')
+        course = request.POST.get('course') 
+        address = request.POST.get('address') 
         Data.objects.create(
             sroll=roll,
             sname=name,
